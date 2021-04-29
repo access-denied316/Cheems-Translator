@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="Cheems_Translator.MainPage"
+    x:Name="page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Cheems_Translator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="page_Loaded">
+
+    <Grid Margin="5">
+        <StackPanel>
+            <MenuBar>
+                <MenuBarItem Title="File">
+                    <MenuFlyoutItem Text="Exit" />
+                </MenuBarItem>
+                <MenuBarItem Title="Edit">
+                    <MenuFlyoutItem Text="Undo" />
+                    <MenuFlyoutItem Text="Cut" />
+                    <MenuFlyoutItem Text="Copy" />
+                    <MenuFlyoutItem Text="Paste" />
+                </MenuBarItem>
+                <MenuBarItem Title="Help">
+                    <MenuFlyoutItem Text="About" Click="About_Click" />
+                </MenuBarItem>
+            </MenuBar>
+            
+            <TextBox Header="Normal Text"   x:Name="normalText" Margin="50,0" TextWrapping="Wrap" TextChanged="normalText_TextChanged"></TextBox>
+            
+            <TextBox Header="Cheemsed Text" x:Name="cheemsText" Margin="50,0" TextWrapping="Wrap" IsReadOnly="True"></TextBox>
+            <Image Height="500" Width="500" Source="/Assets/cheems.png"/>
+
+
+
+        </StackPanel>
+        
+    </Grid>
+</Page>
