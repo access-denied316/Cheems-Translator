@@ -33,14 +33,17 @@ namespace Cheems_Translator
 
         private async void About_Click(object sender, RoutedEventArgs e)
         {
-            ContentDialog about = new ContentDialog()
+            /*ContentDialog about = new ContentDialog()
             {
                 Title = "About",
                 Content = "haham supemr fumnny cheemms translatomr, im laughimng",
                 CloseButtonText = "Close"
             };
 
-            await about.ShowAsync();
+            await about.ShowAsync();*/
+            string uriToLaunch = @"https://github.com/access-denied316/cheems-translator";
+            var uri = new Uri(uriToLaunch);
+            await Windows.System.Launcher.LaunchUriAsync(uri);
         }
 
         // word must be 4 or more letters long
@@ -69,7 +72,7 @@ namespace Cheems_Translator
             return output.LastIndexOfAny(vowels);
         }
 
-        private async void fuckyou(string what)
+        private async void msgBox(string what)
         {
             var dialog = new MessageDialog(what);
             await dialog.ShowAsync();
@@ -138,5 +141,11 @@ namespace Cheems_Translator
         {
             funnyWindowTitle();
         }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Exit();
+        }
+
     }
 }

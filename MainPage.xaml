@@ -13,13 +13,7 @@
         <StackPanel>
             <MenuBar>
                 <MenuBarItem Title="File">
-                    <MenuFlyoutItem Text="Exit" />
-                </MenuBarItem>
-                <MenuBarItem Title="Edit">
-                    <MenuFlyoutItem Text="Undo" />
-                    <MenuFlyoutItem Text="Cut" />
-                    <MenuFlyoutItem Text="Copy" />
-                    <MenuFlyoutItem Text="Paste" />
+                    <MenuFlyoutItem Text="Exit" Click="Exit_Click"/>
                 </MenuBarItem>
                 <MenuBarItem Title="Help">
                     <MenuFlyoutItem Text="About" Click="About_Click" />
@@ -29,7 +23,7 @@
             <TextBox Header="Normal Text"   x:Name="normalText" Margin="50,0" TextWrapping="Wrap" TextChanged="normalText_TextChanged"></TextBox>
             
             <TextBox Header="Cheemsed Text" x:Name="cheemsText" Margin="50,0" TextWrapping="Wrap" IsReadOnly="True"></TextBox>
-            <Image Height="500" Width="500" Source="/Assets/cheems.png"/>
+            <Image Height="500" Width="500" Source="/Assets/cheems.png" />
 
 
 
